@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yeah bank - ваш надежный партнер в мире финансов</title>
+    <link rel="stylesheet" href="StyleSheet1 версия 2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <! -- Шапка сайта -->
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-y logo-badge"></i>yeah bank
+        </div>
+
+        <!-- Кнопка «Три полоски» для мобильных устройств (гамбургер) -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <!-- Навигация -->
+        <nav class="nav-links">
+            <a href="#" onclick="showPage('home')" class="nav-link active">Главная</a>
+            <a href="#" onclick="showPage('cards')" class="nav-link">Карты</a>
+            <a href="#" onclick="showPage('credits')" class="nav-link">Кредиты</a>
+            <a href="#" onclick="showPage('deposits')" class="nav-link">Вклады</a>
+            <a href="#" onclick="showPage('transfers')" class="nav-link">Переводы</a>
+        </nav>
+
+        <button class="login-btn" onclick="showAlert('Окно авторизации')">
+        <i class="fa-regular fa-user"></i>Войти</button>
+    </header>
+
+    <main class="main-content">
+
+        <!-- Главный экран (Hero) -->
+        <div id="home" class="page active-page">
+            <section class="hero">
+                <div class="hero-content">
+                    <span class="badge">Больше, чем просто банк</span>
+                    <h1>yeah bank - ваш надежденный партнер в мире финансов</h1>
+                    <p>Откройте счета, оформляйте карты и управляйте своими финансами онлайн - просто, удобно и безопасно.</p>
+                    <div class="hero-content">
+                        <a href="#" class="btn-main" onclick="showAlert('Заявка на открытие счета принята!')">Открыть счет</a>
+                        <a href="#" class="btn-outline" onclick="showPage('cards')">Подробнее</a>
+                    </div>
+                </div>
+
+                <div class="bank-card">
+                    <div class="card-top">
+                        <span class="card-brand">yeah bank</span>
+                        <i class="fa-solid fa-wifi card-wifi"></i>
+                </div>
+                <div class="card-chip">
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+                <div class="card-number">6767 2204 2008 2026</div>
+                <div class="card-details">
+                    <div class="expiry">12/28</div>
+                    <div class="holder">CARDHOLDER NAME</div>
+                </div>
+        </div>
+      </section>
+
+        <!-- Карточки услуг с якорями для ссылок-->
+        <section class="services">
+            <div class="service-card" onclick="showPage('cards')">
+                <div class="service-icon"><i class="fa-regular fa-credit-card"></i></div>
+                <h3>Карты</h3>
+                <p>Дебетовые и кредитные карты с бесплатным обслуживанием.</p>
+                <span class="card-link">Выбрать карту &rarr;</span>
+            </div>
+            <div class="service-card" onclick="showPage('credits')">
+                <div class="service-icon"><i class="fa-solid fa-coins"></i></div>
+                <h3>Кредиты</h3>
+                <p>Потребительские кредиты наличными на любые цели.</p>
+                <span class="card-link">Рассчитать кредит &rarr;</span>
+            </div>
+            <div class="service-card" onclick="showPage('deposits')">
+                <div class="service-icon"><i class="fa-solid fa-piggy-bank"></i></div>
+                <h3>Вклады</h3>
+                <p>Сберегательные счета с высокой доходностью.</p>
+                <span class="card-link">Открыть вклад &rarr;</span>
+            </div>
+            <div class="service-card" onclick="showPage('transfers')">
+                <div class="service-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+                <h3>Переводы</h3>
+                <p>Между своими счетами, на карту и международные переводы.</p>
+                <span class="card-link">Сделать перевод &rarr;</span>
+            </div>
+        </section>
+        </div>
+
+        <!-- 2. СТРАНИЦА "КАРТЫ" -->
+        <div id="cards-page" class="page">
+            <div class="content-box">
+                <h2>Наши банковские карты</h2>
+                <p>Выберите карту, которая подходит именно вам:</p>
+                <div class="sub-cards-grid">
+                    <div class="sub-card">
+                        <h3>Дебетовая карта</h3>
+                        <p>Кэшбэк до 10% на всё, бесплатное обслуживание.</p>
+                        <button class="btn-main" onclick="showAlert('Заявка на дебетовую карту подана!')">Оформить</button>
+                    </div>
+                    <div class="sub-card">
+                        <h3>Кредитная карта</h3>
+                        <p>До 120 дней без процентов и выгодные условия.</p>
+                        <button class="btn-main" onclick="showAlert('Заявка на кредитную карту подана!')">Оформить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 3. СТРАНИЦА "КРЕДИТЫ" -->
+        <div id="credits-page" class="page">
+            <div class="content-box">
+                <h2>Кредиты наличными и онлайн</h2>
+                <p>Рассчитайте и получите кредит за 5 минут на карту любого банка.</p>
+                <div class="sub-cards-grid">
+                    <div class="sub-card">
+                        <h3>Потребительский кредит</h3>
+                        <p>Ставка от 14% годовых на любые ваши цели.</p>
+                        <button class="btn-main" onclick="showAlert('Заявка на кредит принята!')">Взять кредит</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. СТРАНИЦА "ВКЛАДЫ" -->
+        <div id="deposits-page" class="page">
+            <div class="content-box">
+                <h2>Вклады и сбережения</h2>
+                <p>Сохраните и приумножьте свои сбережения под высокий процент.</p>
+                <div class="sub-cards-grid">
+                    <div class="sub-card">
+                        <h3>Срочный вклад</h3>
+                        <p>До 20% годовых с выплатой процентов каждый месяц.</p>
+                        <button class="btn-main" onclick="showAlert('Вклад успешно открыт!')">Открыть вклад</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. СТРАНИЦА "ПЕРЕВОДЫ" -->
+        <div id="transfers-page" class="page">
+            <div class="content-box">
+                <h2>Быстрые переводы</h2>
+                <p>Отправляйте деньги родным и близким без комиссии.</p>
+                <div class="sub-cards-grid">
+                    <div class="sub-card">
+                        <h3>По номеру телефона</h3>
+                        <p>Мгновенные переводы в любые банки мира.</p>
+                        <button class="btn-main" onclick="showAlert('Перевод выполнен!')">Перевести</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+        <!-- Подвал -->
+    <footer class="foother">
+        <div class="footer-content">
+            <div class="logo white">yeah bank</div>
+            <div class="footer-links">
+                <a href="#" onclick="showPage('home')">Главная</a>
+                <a href="#" onclick="showPage('cards')">Карты</a>
+                <a href="#" onclick="showPage('credits')">Кредиты</a>
+                <a href="#" onclick="showPage('deposits')">Вклады</a>
+                <a href="#" onclick="showPage('transfers')">Переводы</a>
+            </div>
+        </div>
+        <p class="footer-copy">© 2026 Yeah Bank. Aвтор: Мелолю Салима  Группа: ИВТ-2-26 
+        Kstu.kg.</p>
+    </footer>
+
+        <script src="Script1.js"></script>
+</body>
+</html>

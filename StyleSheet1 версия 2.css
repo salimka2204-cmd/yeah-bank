@@ -1,0 +1,385 @@
+﻿/* Общие настройки */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #4A0018;
+    color: white;
+}
+/* Навигация (Шапка) */
+.navbar {
+    background-color: #3d0012;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-badge {
+    background: #E31B4A;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+    .nav-links a {
+        color: #d1b3bd;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 14px;
+        transition: 0.3s;
+        cursor: pointer;
+        border-radius: 6px;
+    }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: white;
+            background: rgba(255,255,255,0.1);
+        }
+
+/* Кнопка "три полоски" (скрыта на ПК) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+    .login-btn {
+        background: transparent;
+        border: 1px solid rgba(red, 255, 255, 0.4);
+        color: white;
+        padding: 8px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .login-btn:hover {
+            background: rgba(255, 255, 255,0.2);
+        }
+    /* Система подключения страниц */
+    .page {
+        display: none; /* Скрываем все страницы по умолчанию */
+    }
+
+        .page.active-page {
+            display: block;
+        }
+    /* Главный блок (Hero) */
+    .hero {
+        padding: 60px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+    .badge {
+        background-color: rgba(red, 255, 255, 0.1);
+        color: #d1b3bd;
+        padding: 6px 14px;
+        border-radius: 15px;
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+        margin: 20px 0;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        color: #e0d0d6;
+        font-size: 16px;
+        margin-bottom: 30px;
+        line-height: 1.5;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 15px;
+    }
+
+    .btn-main {
+        display: inline-block;
+        background-color: #E31B4A;
+        color: white;
+        padding: 12px 30px;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .btn-main:hover {
+            background-color: #c4133d;
+        }
+
+    .btn-outline {
+        display: inline-block;
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        color: white;
+        padding: 12px 30px;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+    /* Банковская карта */
+    .bank-card {
+        width: 320px;
+        height: 190px;
+        background: linear-gradient(135deg, #7A0C2E, #2A000E);
+        border-radius: 16px;
+        padding: 25px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .card-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card-brand {
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+.card-wifi {
+    font-size: 18px;
+    color: #ccc;
+}
+
+.card-chip {
+    font-size: 28px;
+    color: #d4af37; /* Цвет золотого чипа */
+}
+    .card-number {
+        font-size: 20px;
+        letter-spacing: 3px;
+        font-family: monospace;
+    }
+
+    .card-details {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: #ccc;
+    }
+    /* Сулция услуг */
+    .services {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 50px 20px;
+        flex-wrap: wrap;
+    }
+
+    .service-card {
+        background: #3b0012;
+        padding: 25px;
+        width: 230px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        border-top: 4px solid #E31B4A;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            background: #4A0018;
+        }
+
+.service-icon {
+    background: #fde8ed;
+    color: #4A0018;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+        .service-card h3 {
+            margin-top: 0;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 13px;
+            color: #d1b3bd;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+.card-link {
+    font-size: 13px;
+    color: #ff85a2;
+    font-weight: bold;
+}
+
+    /* Внутренние страницы сервисов */
+    .content-box {
+        padding: 60px 50px;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+        .content-box h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .content-box p {
+            color: #d1b3bd;
+            margin-bottom: 30px;
+        }
+
+    .sub-cards-grid {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .sub-card {
+        background: #3b0012;
+        padding: 30px;
+        border-radius: 16px;
+        width: 280px;
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+
+        .sub-card h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .sub-card p {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+    /* Цветной подвал */
+    footer {
+        background-color: #26000c;
+        color: #d1b3bd;
+        text-align: center;
+        padding: 40px 50px 20px 50px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        margin-top: 40px;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .footer-links a {
+        color: #d1b3bd;
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+    .footer-copy {
+        text-align: center;
+        font-size: 12px;
+        color: #888;
+        border-top: 1px solid rgba(255,255,255,0.05);
+        padding-top: 20px;
+    }
+
+/* АДАПТИВНОСТЬ ДЛЯ ТЕЛЕФОНОВ (Media Queries) */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    /* Показываем иконку трех полосок */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Прячем меню по умолчанию на телефоне */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: #3b0012;
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        z-index: 100;
+        box-sizing: border-box;
+    }
+
+        /* Когда меню открыто через JS, оно становится видимым */
+        .nav-links.show {
+            display: flex;
+        }
+
+    .hero {
+        padding: 30px 20px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
